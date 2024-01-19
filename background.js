@@ -35,7 +35,6 @@ function sendTextToContentScript() {
 }
 
 function processClipboardText(clip, tabId) {
-  // Your existing code for processing the clipboard text
   clip = clip.trim().replace(/\r/g, "").split("\n").slice(20, 60);
 
   const lopenummer = clip[clip.indexOf("Physical identifier") + 1].match(/TKP\d+/)[0];
