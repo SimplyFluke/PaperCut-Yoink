@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "PaperCut Yoinker",
+    "version": "1.0",
+    "description": "Grab printer info",
+    "permissions": ["activeTab", "storage", "scripting"],
+    "action": {
+      "default_icon": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+      },
+      "default_title": "Yoink!"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "icons": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  }
+  
